@@ -1,0 +1,6 @@
+node_modules/
+dist/
+dist-package/
+assets/results-screen.png
+assets/reward-popup.png
+*.log

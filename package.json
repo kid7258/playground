@@ -1,0 +1,25 @@
+{
+  "name": "fc-online-bot",
+  "version": "1.0.0",
+  "description": "FC Online 감독모드 자동화 봇",
+  "main": "dist/main/index.js",
+  "scripts": {
+    "dev": "tsc -p tsconfig.main.json && electron .",
+    "build:ts": "tsc -p tsconfig.main.json && tsc -p tsconfig.renderer.json",
+    "build": "npm run build:ts && electron-builder --win --x64",
+    "typecheck": "tsc --noEmit -p tsconfig.main.json && tsc --noEmit -p tsconfig.renderer.json"
+  },
+  "dependencies": {
+    "@nut-tree-fork/nut-js": "^4.2.1"
+  },
+  "optionalDependencies": {
+    "ffi-napi": "^4.0.3",
+    "ref-napi": "^3.0.3"
+  },
+  "devDependencies": {
+    "@types/node": "^20.14.0",
+    "electron": "^31.0.0",
+    "electron-builder": "^25.0.0",
+    "typescript": "^5.5.0"
+  }
+}
